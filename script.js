@@ -2,22 +2,22 @@ console.log("welcome to spotify");
 
 
 let songIndex=1;
-let audio= new Audio('songs/1.mp3');
+let audio= new Audio('1.mp3');
 let play=document.getElementById('play');
 let myprogressbar=document.getElementById('myprogressbar');
 let gif=document.getElementById('gif');
 
 
 let songs= [
-    {songName:"1",filePath:"songs/1.mp3",coverPath:"cover/1.jpg"},
-    {songName:"2",filePath:"songs/2.mp3",coverPath:"cover/2.jpg"},
-    {songName:"3",filePath:"songs/3.mp3",coverPath:"cover/3.jpg"},
-    {songName:"4",filePath:"songs/4.mp3",coverPath:"cover/4.jpg"},
-    {songName:"5",filePath:"songs/5.mp3",coverPath:"cover/5.jpg"},
-    {songName:"6",filePath:"songs/6.mp3",coverPath:"cover/6.jpg"},
-    {songName:"7",filePath:"songs/7.mp3",coverPath:"cover/7.jpg"},
-    {songName:"8",filePath:"songs/8.mp3",coverPath:"cover/8.jpg"},
-    {songName:"9",filePath:"songs/9.mp3",coverPath:"cover/9.jpg"},
+    {songName:"1",filePath:"1.mp3",coverPath:"1.jpg"},
+    {songName:"2",filePath:"2.mp3",coverPath:"2.jpg"},
+    {songName:"3",filePath:"3.mp3",coverPath:"3.jpg"},
+    {songName:"4",filePath:"4.mp3",coverPath:"4.jpg"},
+    {songName:"5",filePath:"5.mp3",coverPath:"5.jpg"},
+    {songName:"6",filePath:"6.mp3",coverPath:"6.jpg"},
+    {songName:"7",filePath:"7.mp3",coverPath:"7.jpg"},
+    {songName:"8",filePath:"8.mp3",coverPath:"8.jpg"},
+    {songName:"9",filePath:"9.mp3",coverPath:"9.jpg"},
 ]
 
 
@@ -62,7 +62,7 @@ Array.from(document.getElementsByClassName('specific')).forEach((element)=>{
         songIndex=parseInt(e.target.id);
         e.target.classList.remove('fa-play');
         e.target.classList.add('fa-pause');
-        audio.src = `songs/${songIndex}.mp3`;
+        audio.src = `${songIndex}.mp3`;
         audio.currentTime=0;
         audio.play();
         play.classList.remove('fa-play');
@@ -77,7 +77,7 @@ document.getElementById('icon2').addEventListener('click',()=>{
     else{
         songIndex+=1;
     }
-    audio.src = `songs/${songIndex}.mp3`;
+    audio.src = `${songIndex}.mp3`;
     audio.currentTime=0;
     audio.play();
     play.classList.remove('fa-play');
@@ -90,7 +90,7 @@ document.getElementById('icon1').addEventListener('click',()=>{
     else{
         songIndex-=1;
     }
-    audio.src = `songs/${songIndex}.mp3`;
+    audio.src = `${songIndex}.mp3`;
     audio.currentTime=0;
     audio.play();
     play.classList.remove('fa-play');
